@@ -1,0 +1,20 @@
+[package]
+name = "sarissa-ai"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "A Rust-based offensive security automation tool with local LLM integration"
+license = "MIT"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+log = "0.4"
+simple_logger = "1.16"
+tempfile = "3.10.1"
+config = "0.13"
+dotenv = "0.15"
+rand = "0.8"
+csv = "1.1"

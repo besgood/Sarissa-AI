@@ -1,0 +1,13 @@
+# Example Configuration for Sarissa-AI
+
+# LLM Options
+api_key = "ollama"
+model = "llama3"
+
+# Target Specification
+target_domain = "example.com"
+
+# Scan Depth Level (1 = light, 5 = aggressive)
+scan_depth = 3
+
+# Optional future settings can go here.
