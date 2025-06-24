@@ -1,0 +1,17 @@
+use serde::Deserialize;
+use std::fs;
+
+#[derive(Deserialize, Debug)]
+pub struct Config {
+    pub api_key: Option<String>,
+    pub model: Option<String>,
+    pub target_domain: Option<String>,
+    pub scan_depth: Option<u8>,
+}
+
+impl Config {
+    pub fn load_from_file(path: &str) -> Self {
+        let contents = fs::read_to_string(path).expect("Failed to read config.toml");
+        toml::from_str(&contents).expect("Failed to parse config.toml")
+    }
+}
